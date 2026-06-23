@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-output_dir="${1:-/home/oit/ros2_ws/bags/femto_bolt}"
+timestamp="$(date +%Y_%m_%d-%H_%M_%S)"
+output_dir="${1:-/home/oit/ros2_ws/bags/femto_bolt_${timestamp}}"
 
 mkdir -p "$(dirname "$output_dir")"
+echo "Recording rosbag to: $output_dir"
 
 ros2 bag record \
   --output "$output_dir" \
