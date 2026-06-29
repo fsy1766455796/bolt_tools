@@ -17,4 +17,4 @@ ros2 bag record \
   /camera/color/camera_info \
   /camera/depth/image_raw \
   /camera/depth/camera_info \
-  /camera/depth/points
+  /camera/depth_registered/points

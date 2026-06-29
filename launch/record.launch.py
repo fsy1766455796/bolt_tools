@@ -28,7 +28,7 @@ def generate_launch_description():
                     "/tf /tf_static "
                     "/camera/color/image_raw /camera/color/camera_info "
                     "/camera/depth/image_raw /camera/depth/camera_info "
-                    "/camera/depth/points"
+                    "/camera/depth_registered/points"
                 ),
             ),
             IncludeLaunchDescription(

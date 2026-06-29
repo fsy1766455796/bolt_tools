@@ -14,6 +14,7 @@ Visualization Manager:
       Plane Cell Count: 10
       Value: true
     - Class: rviz_default_plugins/PointCloud2
+      Color Transformer: RGB8
       Enabled: true
       Name: PointCloud2
       Position Transformer: XYZ
@@ -25,7 +26,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /camera/depth/points
+        Value: /camera/depth_registered/points
       Use Fixed Frame: true
       Value: true
     - Class: rviz_default_plugins/Image

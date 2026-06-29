@@ -13,6 +13,8 @@ def generate_launch_description():
     return LaunchDescription(
         [
             DeclareLaunchArgument("camera_name", default_value="camera"),
+            DeclareLaunchArgument("enable_colored_point_cloud", default_value="true"),
+            DeclareLaunchArgument("depth_registration", default_value="true"),
             DeclareLaunchArgument(
                 "rviz_config",
                 default_value=PathJoinSubstitution(
@@ -32,8 +34,10 @@ def generate_launch_description():
                 launch_arguments={
                     "camera_name": camera_name,
                     "enable_point_cloud": "true",
-                    "enable_colored_point_cloud": "false",
-                    "depth_registration": "false",
+                    "enable_colored_point_cloud": LaunchConfiguration(
+                        "enable_colored_point_cloud"
+                    ),
+                    "depth_registration": LaunchConfiguration("depth_registration"),
                 }.items(),
             ),
             Node(
